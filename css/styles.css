@@ -392,18 +392,11 @@ img {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Плавный переход для первой соцсети */
-.social-links li:first-child .social-link {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Стили для ссылок с href начинающимся на ./images и содержащим .svg# */
-.social-link[href^="./images"][href*=".svg#"]:hover,
-.social-link[href^="./images"][href*=".svg#"]:focus,
-.social-link[href^="./images"][href*=".svg#"]:focus-visible {
+.social-link:hover,
+.social-link:focus,
+.social-link:focus-visible {
     background-color: #404bbf;
     outline: none;
 }
@@ -415,9 +408,9 @@ img {
 }
 
   /* Секція Portfolio */
-  :root {
-      --image-text-color: #f4f4fd;
-  }
+:root {
+    --image-text-color: #f4f4fd;
+}
 
   /* Секция Portfolio */
   .portfolio-section {
