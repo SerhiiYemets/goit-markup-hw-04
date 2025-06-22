@@ -30,7 +30,6 @@ ul {
 a {
     text-decoration: none;
     display: inline-block;
-    background-color: #404bbf;
 }
 
 .container {
@@ -397,10 +396,8 @@ img {
 
 .social-link:hover,
 .social-link:focus,
-.social-link:focus-visible
  {
     background-color: #404bbf;
-    outline: none;
     
 }
 
