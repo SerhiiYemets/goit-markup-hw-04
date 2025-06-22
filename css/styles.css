@@ -505,15 +505,25 @@ img {
     opacity: 1;
 }
 
-
-  /* Футер */
-  .footer {
+/* Footer */
+.footer {
     background-color: #2e2f42;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
+    padding: 100px 0;
+    color: white;
+}
 
-  .footer .logo {
+.footer-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+}
+
+.footer-info {
+    max-width: 264px;
+    flex-shrink: 0;
+}
+
+.footer .logo {
     display: inline-block;
     margin-bottom: 16px;
     font-family: var(--second-family);
@@ -523,16 +533,50 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-  }
+}
 
-  .logo-studio-white {
+.logo-studio-white {
     color: #ffffff;
-  }
+}
 
-  .text-light {
+.text-light {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
-    max-width: 264px;
-  }
+}
+
+.footer-social .social-title {
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.social-list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #6c77ff;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
