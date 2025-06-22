@@ -400,12 +400,12 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Изменение фона при hover и focus-visible (клавиатурный фокус) */
-.social-link:hover,
-.social-link:focus-visible {
+/* Стили для ссылок с href начинающимся на ./images и содержащим .svg# */
+.social-link[href^="./images"][href*=".svg#"]:hover,
+.social-link[href^="./images"][href*=".svg#"]:focus,
+.social-link[href^="./images"][href*=".svg#"]:focus-visible {
     background-color: #404bbf;
     outline: none;
-    /* отключаем контур, если он есть */
 }
 
 .social-icon {
@@ -413,7 +413,6 @@ img {
     height: 16px;
     fill: var(--icon-fill-color);
 }
-
 
   /* Секція Portfolio */
   :root {
