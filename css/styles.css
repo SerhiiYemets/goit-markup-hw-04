@@ -246,7 +246,20 @@ img {
     height: 64px;
     margin-bottom: 8px;
     fill: currentColor;
-    /* Добавлено для отображения */
+}
+
+.icon-features {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+    fill: currentColor;
+    padding-left: 264px;
+    padding-bottom: 112px;
+    border: 1px solid lightslategrey;
+    background-color: #F4F4FD;
+    border-radius: 5px;
+    align-items: center;
 }
 
 .feature-heading {
