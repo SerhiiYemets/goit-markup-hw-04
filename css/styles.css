@@ -45,6 +45,16 @@ img {
     display: block;
 }
 
+.site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow:
+        0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+    /* ✅ Тень для хедера по ТЗ */
+}
+
 .site-header .container {
     display: flex;
     justify-content: space-between;
@@ -53,17 +63,10 @@ img {
     padding-top: 36px;
 }
 
-.site-header {
-    background-color: #fff;
-    border-bottom: 1px solid #e7e9fc; 
-
-}
-
- /* Навигация */
- .main-nav {
+.main-nav {
     display: flex;
     align-items: center;
-    }
+}
 
 /* === ЛОГОТИП === */
 .site-logo {
@@ -82,11 +85,12 @@ img {
     color: #2e2f42;
 }
 
-/* === НАВІГАЦІЯ === */
+/* === НАВИГАЦИЯ === */
 .nav-list {
     display: flex;
     list-style: none;
     margin: 0;
+    padding: 0;
     gap: 40px;
 }
 
@@ -97,16 +101,49 @@ img {
     letter-spacing: 0.02em;
     color: #2e2f42;
     text-decoration: none;
-    transition: color 0.3s ease;
-    display: block;
+    position: relative;
+    /* ✅ По ТЗ */
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* ✅ Плавный переход */
 }
 
+/* Активная ссылка: имитируем подчёркивание */
+.nav-link::after {
+    content: '';
+    /* ✅ Псевдоэлемент */
+    position: absolute;
+    /* ✅ Абсолютное позиционирование */
+    left: 0;
+    /* ✅ Отступ от левого края */
+    bottom: -1px;
+    /* ✅ Отступ снизу */
+    width: 100%;
+    /* ✅ На всю ширину родителя */
+    height: 4px;
+    /* ✅ Высота линии */
+    background-color: #404bbf;
+    /* ✅ Цвет подчёркивания */
+    border-radius: 2px;
+    /* ✅ Скругление */
+    transform: scaleX(0);
+    /* Скрываем изначально */
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: left;
+}
+
+/* При наведении — цвет текста + появление линии */
 .nav-link:hover,
 .nav-link:focus {
     color: #404bbf;
+    /* ✅ Цвет текста при hover/focus */
 }
 
-/* === КОНТАКТИ === */
+.nav-link:hover::after,
+.nav-link:focus::after {
+    transform: scaleX(1);
+}
+
+/* === КОНТАКТЫ === */
 .contact-address {
     font-style: normal;
 }
@@ -125,7 +162,8 @@ img {
     letter-spacing: 0.02em;
     color: #434455;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* ✅ По ТЗ */
 }
 
 .contact-link:hover,
