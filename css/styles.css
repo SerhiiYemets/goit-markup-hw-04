@@ -412,6 +412,11 @@ img {
     fill: var(--icon-fill-color);
 }
 
+  /* Секція Portfolio */
+  :root {
+      --image-text-color: #f4f4fd;
+  }
+
   /* Секция Portfolio */
   .portfolio-section {
       padding-top: 120px;
@@ -433,9 +438,6 @@ img {
       color: #2e2f42;
       text-align: center;
       margin-bottom: 72px;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
   }
 
   /* Список */
@@ -449,20 +451,20 @@ img {
       margin: 0;
   }
 
-  /* Элементы списка — применяем одинаковые классы с 3+ символами, латиница, дефис/подчеркивание */
-  .project-card,
-  .card-item {
+  /* Элемент списка */
+  /* Класс project-card — подходит по ТЗ */
+  .project-card {
       width: calc((100% - 48px) / 3);
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      position: relative;
 
-      /* Переход для тени у первого элемента */
+      /* Переход тени (только для первого элемента, но проще для всех) */
       transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
   }
 
-  /* При hover на элемент списка добавляем тень (тень по ТЗ) */
+  /* При ховере box-shadow для всех элементов */
   .project-card:hover {
       box-shadow:
           0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -470,8 +472,14 @@ img {
           0px 2px 1px rgba(46, 47, 66, 0.08);
   }
 
-  /* Картинка */
-  .project-card img {
+  .image-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      display: block;
+  }
+
+  .image-wrapper img {
       display: block;
       width: 100%;
       height: auto;
@@ -479,61 +487,30 @@ img {
       object-fit: cover;
   }
 
-  /* Контент внутри карточки */
-  .project-card .card-content {
-      padding: 32px 16px;
-      border: 1px solid #e7e9fc;
-      border-top: none;
-  }
-
-  /* Заголовок */
-  .card-title {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 1.2;
-      color: #2e2f42;
-      margin-bottom: 8px;
-  }
-
-  /* Параграф */
-  .card-text {
-      font-size: 16px;
-      line-height: 1.5;
-      color: #434455;
-      margin: 0;
-  }
-
-  /* Новый класс контейнера картинки с текстом */
-  .image-container {
-      position: relative;
-      /* позиционирование для абсолютного параграфа */
-      overflow: hidden;
-      /* скрытие выходящего контента */
-      border-radius: 4px;
-  }
-
-  /* Параграф с текстом поверх картинки */
-  .image-description {
+  /* Абсолютно позиционированный параграф */
+  .image-text {
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      height: 100%;
       width: 100%;
+      height: 100%;
       padding: 40px 32px;
-      background-color: #4d5ae5;
       font-size: 16px;
       line-height: 1.5;
       letter-spacing: 0.02em;
-      color: #f4f4fd;
-      /* можно вынести в css-переменную, если нужно */
+      color: var(--image-text-color, #f4f4fd);
+      background-color: #4d5ae5;
+      box-sizing: border-box;
+
       transform: translateY(100%);
       transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      box-sizing: border-box;
+
+      /* чтобы текст поверх картинки */
+      z-index: 2;
   }
 
-  /* При ховере на элемент списка - параграф сдвигается */
-  .project-card:hover .image-description {
+  /* При наведении на .project-card, поднимаем .image-text */
+  .project-card:hover .image-text {
       transform: translateY(0%);
   }
 /* Footer */
