@@ -247,6 +247,25 @@ img {
     margin-bottom: 8px;
     fill: currentColor;
 }
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #f4f4fd;
+    border: 1px solid lightslategrey;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-features {
+    width: 64px;
+    height: 64px;
+    fill: currentColor;
+}
 
 .icon-features {
     display: block;
