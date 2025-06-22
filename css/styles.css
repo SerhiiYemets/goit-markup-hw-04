@@ -307,13 +307,12 @@ img {
 }
 
 /* Секция команды */
-/* Секция */
 .team-section {
     background-color: #f4f4fd;
     padding: 120px 0;
 }
 
-/* Заголовок */
+/* Заголовок секции */
 .team-title {
     font-size: 36px;
     line-height: 1.11;
@@ -332,80 +331,97 @@ img {
     margin: 0;
 }
 
-/* Карточка */
-.team-card {
-    background-color: #fff;
-    border-radius: 0 0 4px 4px;
+/* Первый элемент списка команды */
+.team-list li:first-child.team-card {
     box-shadow:
         0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
-    flex-basis: calc((100% - 3 * 24px) / 4);
-    text-align: center;
-    overflow: hidden;
+    border-radius: 0 0 4px 4px;
 }
 
-/* Контейнер с описанием */
+/* Общие стили для карточек */
+.team-card {
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    /* на всякий случай, для остальных */
+    overflow: hidden;
+    box-shadow:
+        0px 2px 1px rgba(0, 0, 0, 0.08),
+        0px 1px 1px rgba(0, 0, 0, 0.16),
+        0px 1px 6px rgba(0, 0, 0, 0.08);
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    text-align: center;
+}
+
+/* Контейнер внутри карточки с описанием картинки */
 .card-content {
     padding: 32px 0;
 }
 
-/* Имя и должность */
+/* Имя сотрудника */
 .card-name {
-    font-size: 20px;
     font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
     color: #2e2f42;
     margin-bottom: 8px;
+    text-align: center;
 }
 
+/* Должность сотрудника */
 .card-position {
     font-size: 16px;
+    line-height: 1.5;
     color: #434455;
-    margin-bottom: 16px;
+    text-align: center;
 }
 
-/* Список соцмереж */
+/* Список соцсетей */
 .social-links {
     display: flex;
     justify-content: center;
     gap: 24px;
-    padding: 0;
-    margin: 0;
     list-style: none;
+    padding: 0;
+    margin-top: 12px;
 }
 
-/* Элемент списка соцмереж */
-.social-item {
+/* Элементы списка соцсетей */
+.social-links li {
     width: 40px;
     height: 40px;
 }
 
-/* Ссылка в соцмережах */
-.link {
+/* Ссылка соцсети */
+.social-links li a {
     width: 100%;
     height: 100%;
     background-color: #4d5ae5;
-    /* был var(--primary-bg-color) */
     border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    /* убирает подчеркивание */
 }
 
-.link:hover,
-.link:focus {
+/* Состояния hover и focus для ссылки */
+.social-links li a:hover,
+.social-links li a:focus {
     background-color: #404bbf;
-    /* был var(--hover-bg-color) */
 }
 
-/* Иконки соцмереж */
-.icon {
-    fill: #f4f4fd;
-    /* был var(--icon-color) */
+/* Иконка svg */
+.social-links li a svg {
     width: 16px;
     height: 16px;
+    fill: #f4f4fd;
 }
+
+/* Можно при необходимости добавить класс для svg, если он нужен */
+/* Но по ТЗ — все svg с классами из маленьких латинских букв и дефисов/подчеркиваний */
   
 
   /* Секція Portfolio */
