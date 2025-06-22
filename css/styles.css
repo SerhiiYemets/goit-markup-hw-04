@@ -133,36 +133,53 @@ img {
     color: #404bbf;
 }
 
-/* === СЕКЦІЯ === */
+/* === СЕКЦІЯ HERO === */
 .hero-image {
-    background-color: #2e2f42;
-    background-image: url('../images/people-office.jpg');
+    position: relative;
+    background-image: url(../images/people-office.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     color: #fff;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding: 188px 0;
     text-align: center;
+    overflow: hidden;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(46, 47, 66, 0.7);
+    /* Серый полупрозрачный фон */
+    z-index: 1;
 }
 
 .hero-image .container {
+    position: relative;
+    z-index: 2;
+    /* Поднимаем контент над оверлеем */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+/* === ЗАГОЛОВОК === */
 .hero-title {
     font-size: 56px;
     line-height: 1.07;
-    text-align: center;
     letter-spacing: 0.02em;
     color: #ffffff;
     margin-bottom: 48px;
     max-width: 496px;
+    text-align: center;
 }
 
+/* === КНОПКА === */
 .main-button {
     background-color: #4d5ae5;
     font-family: "Roboto", sans-serif;
@@ -173,19 +190,18 @@ img {
     color: #ffffff;
     cursor: pointer;
     border: none;
-    text-align: center;
     padding: 16px 32px;
-    transition: background-color 0.3s ease;
     min-width: 169px;
     border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .main-button:hover,
 .main-button:focus {
     background-color: #404bbf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Друга секція */
 .features-section {
     padding: 120px 0;
     background-color: #ffffff;
@@ -221,15 +237,16 @@ img {
 
 .features-item {
     width: calc((100% - 72px) / 4);
-    text-align: center;
+    text-align: left;
 }
 
 .icon {
     display: block;
-    fill: currentColor;
-    margin-bottom: 8px;
     width: 64px;
     height: 64px;
+    margin-bottom: 8px;
+    fill: currentColor;
+    /* Добавлено для отображения */
 }
 
 .feature-heading {
