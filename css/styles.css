@@ -271,33 +271,24 @@ img {
     text-align: left;
 }
 
-.icon {
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin-bottom: 8px;
-    fill: currentColor;
-}
-.icon-box {
+/* ✅ Исправленный div для иконки */
+.feature-icon-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 264px;
     height: 112px;
     background-color: #f4f4fd;
-    border: 1px solid lightslategrey;
     border-radius: 4px;
+    border: 1px solid #8e8f99;
     margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.icon-features {
+/* Иконка (svg) */
+.feature-icon-box svg {
     width: 64px;
     height: 64px;
     fill: currentColor;
 }
-
 
 .feature-heading {
     font-weight: 500;
