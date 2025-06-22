@@ -30,6 +30,7 @@ ul {
 a {
     text-decoration: none;
     display: inline-block;
+    background-color: #404bbf;
 }
 
 .container {
