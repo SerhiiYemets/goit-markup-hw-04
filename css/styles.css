@@ -60,7 +60,7 @@ img {
 }
 
  /* Навигация */
-.main-nav {
+ .main-nav {
     display: flex;
     align-items: center;
     }
@@ -135,7 +135,6 @@ img {
 
 /* === СЕКЦІЯ === */
 .hero-image {
-    position: relative;
     background-color: #2e2f42;
     background-image: url('../images/people-office.jpg');
     background-size: cover;
@@ -145,26 +144,9 @@ img {
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
-    overflow: hidden;
 }
 
-/* Затемняющий слой */
-.hero-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(46, 47, 66, 0.6);
-    /* тёмный полупрозрачный слой */
-    z-index: 0;
-}
-
-/* Контейнер внутри hero — ставим поверх затемнения */
 .hero-image .container {
-    position: relative;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,6 +185,7 @@ img {
     background-color: #404bbf;
 }
 
+/* Друга секція */
 .features-section {
     padding: 120px 0;
     background-color: #ffffff;
