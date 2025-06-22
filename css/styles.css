@@ -60,7 +60,7 @@ img {
 }
 
  /* Навигация */
- .main-nav {
+.main-nav {
     display: flex;
     align-items: center;
     }
@@ -203,14 +203,12 @@ img {
     background-color: #404bbf;
 }
 
-/* Друга секція */
 .features-section {
     padding: 120px 0;
     background-color: #ffffff;
     color: #2e2f42;
 }
 
-/* Прихований заголовок */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -224,14 +222,12 @@ img {
     clip-path: inset(100%);
 }
 
-/* Контейнер */
 .features-section .container {
     max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/* Список */
 .features-list {
     display: flex;
     gap: 24px;
@@ -240,12 +236,19 @@ img {
     margin: 0;
 }
 
-/* Елементи списку */
 .features-item {
     width: calc((100% - 72px) / 4);
+    text-align: center;
 }
 
-/* Заголовок всередині елемента */
+.icon {
+    display: block;
+    fill: currentColor;
+    margin-bottom: 8px;
+    width: 64px;
+    height: 64px;
+}
+
 .feature-heading {
     font-weight: 500;
     font-size: 20px;
@@ -255,7 +258,6 @@ img {
     margin-bottom: 8px;
 }
 
-/* Параграф всередині елемента */
 .feature-text {
     font-size: 16px;
     line-height: 1.5;
