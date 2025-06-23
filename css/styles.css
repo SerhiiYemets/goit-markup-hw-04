@@ -52,7 +52,7 @@ img {
         0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
-
+    /* ✅ Тень для хедера по ТЗ */
 }
 
 .site-header .container {
@@ -106,25 +106,31 @@ img {
     color: #2e2f42;
     text-decoration: none;
     position: relative;
+    /* ✅ По ТЗ */
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    /* ✅ Плавный переход */
 }
 
+/* Активная ссылка: имитируем подчёркивание */
 .nav-link::after {
     content: '';
-
+    /* ✅ Псевдоэлемент */
     position: absolute;
-  
+    /* ✅ Абсолютное позиционирование */
     left: 0;
-    
+    /* ✅ Отступ от левого края */
     bottom: -1px;
-  
+    /* ✅ Отступ снизу */
     width: 100%;
-
+    /* ✅ На всю ширину родителя */
     height: 4px;
-    background-color: #404bbf; 
-    border-radius: 2px; 
+    /* ✅ Высота линии */
+    background-color: #404bbf;
+    /* ✅ Цвет подчёркивания */
+    border-radius: 2px;
+    /* ✅ Скругление */
     transform: scaleX(0);
+    /* Скрываем изначально */
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: left;
 }
@@ -378,14 +384,15 @@ img {
 
 /* Основной стиль для ссылок */
 .social-link {
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color, #4d5ae5);
+    background-color: #4d5ae5;
     border-radius: 50%;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    transition: background-color 250ms ease;
 }
 
 .social-link:hover,
