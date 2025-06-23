@@ -587,6 +587,12 @@ img {
     text-decoration: none;
 }
 
+.social-link-it:hover,
+.social-link-it:focus {
+    background-color: #31d0aa;
+    outline: none;
+}
+
 .social-icon {
     width: 24px;
     height: 24px;
