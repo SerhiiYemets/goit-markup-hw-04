@@ -52,7 +52,7 @@ img {
         0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
-    /* ✅ Тень для хедера по ТЗ */
+
 }
 
 .site-header .container {
@@ -106,40 +106,27 @@ img {
     color: #2e2f42;
     text-decoration: none;
     position: relative;
-    /* ✅ По ТЗ */
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* ✅ Плавный переход */
+
 }
 
-/* Активная ссылка: имитируем подчёркивание */
 .nav-link::after {
     content: '';
-    /* ✅ Псевдоэлемент */
     position: absolute;
-    /* ✅ Абсолютное позиционирование */
     left: 0;
-    /* ✅ Отступ от левого края */
     bottom: -1px;
-    /* ✅ Отступ снизу */
     width: 100%;
-    /* ✅ На всю ширину родителя */
     height: 4px;
-    /* ✅ Высота линии */
-    background-color: #404bbf;
-    /* ✅ Цвет подчёркивания */
-    border-radius: 2px;
-    /* ✅ Скругление */
+    background-color: #404bbf; 
+    border-radius: 2px; 
     transform: scaleX(0);
-    /* Скрываем изначально */
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: left;
 }
 
-/* При наведении — цвет текста + появление линии */
 .nav-link:hover,
 .nav-link:focus {
     color: #404bbf;
-    /* ✅ Цвет текста при hover/focus */
 }
 
 .nav-link:hover::after,
@@ -167,7 +154,6 @@ img {
     color: #434455;
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* ✅ По ТЗ */
 }
 
 .contact-link:hover,
@@ -175,13 +161,15 @@ img {
     color: #404bbf;
 }
 
-/* === СЕКЦІЯ HERO === */
+/*  СЕКЦІЯ HERO  start */
 .hero-section {
     position: relative;
     max-width: 1440px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-            rgba(46, 47, 66, 0.7)),
-        url(../images/people-office.jpg);
+    background-image: 
+    linear-gradient
+    (rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+    url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -231,7 +219,9 @@ img {
     background-color: #404bbf;
 }
 
-/* features */
+/*  СЕКЦІЯ HERO  end */
+
+/* features start */
 
 .features-section {
     padding: 120px 0;
@@ -271,7 +261,6 @@ img {
     text-align: left;
 }
 
-/* ✅ Исправленный div для иконки */
 .feature-icon-box {
     display: flex;
     align-items: center;
@@ -283,7 +272,6 @@ img {
     margin-bottom: 8px;
 }
 
-/* Иконка (svg) */
 .feature-icon-box svg {
     width: 64px;
     height: 64px;
@@ -306,7 +294,10 @@ img {
     color: #434455;
 }
 
-/* Секция команды */
+/* features end */
+
+/* Секция team start*/
+
 .team-section {
     background-color: #f4f4fd;
     padding: 120px 0;
@@ -331,9 +322,9 @@ img {
 
 .team-list li:first-child.team-card {
     box-shadow:
-        0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
+    0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -342,9 +333,9 @@ img {
     border-radius: 0px 0px 4px 4px;
     overflow: hidden;
     box-shadow:
-        0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
+    0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
     flex-basis: calc((100% - 72px) / 4);
     text-align: center;
 }
@@ -406,109 +397,100 @@ img {
     fill: #fff;
 }
 
-  /* Секція Portfolio */
+/* Секция team end*/
+
+  /* Секція Portfolio start */
 :root {
     --image-text-color: #f4f4fd;
 }
 
-  /* Секция Portfolio */
-  .portfolio-section {
-      padding-top: 120px;
-      padding-bottom: 120px;
-      background-color: #ffffff;
+.portfolio-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #ffffff;
+}
+
+.portfolio-section .container {
+max-width: 1158px;
+margin: 0 auto;
+padding: 0 15px;
+}
+
+.section-title {
+font-size: 36px;
+line-height: 1.11;
+color: #2e2f42;
+text-align: center;
+margin-bottom: 72px;
   }
 
-  /* Контейнер */
-  .portfolio-section .container {
-      max-width: 1158px;
-      margin: 0 auto;
-      padding: 0 15px;
-  }
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-  /* Заголовок */
-  .section-title {
-      font-size: 36px;
-      line-height: 1.11;
-      color: #2e2f42;
-      text-align: center;
-      margin-bottom: 72px;
-  }
+.project-card {
+    width: calc((100% - 48px) / 3);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
 
-  /* Список */
-  .project-list {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 24px;
-      row-gap: 48px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-  }
+.project-card:hover {
+    box-shadow:
+    0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
-  /* Элемент списка */
-  /* Класс project-card — подходит по ТЗ */
-  .project-card {
-      width: calc((100% - 48px) / 3);
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    display: block;
+}
 
-      /* Переход тени (только для первого элемента, но проще для всех) */
-      transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
-  }
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
 
-  /* При ховере box-shadow для всех элементов */
-  .project-card:hover {
-      box-shadow:
-          0px 1px 6px rgba(46, 47, 66, 0.08),
-          0px 1px 1px rgba(46, 47, 66, 0.16),
-          0px 2px 1px rgba(46, 47, 66, 0.08);
-  }
+.image-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--image-text-color, #f4f4fd);
+    background-color: #4d5ae5;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
 
-  .image-wrapper {
-      position: relative;
-      overflow: hidden;
-      border-radius: 4px;
-      display: block;
-  }
 
-  .image-wrapper img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      object-fit: cover;
-  }
+.project-card:hover .image-text {
+    transform: translateY(0%);
+}
 
-  /* Абсолютно позиционированный параграф */
-  .image-text {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 40px 32px;
-      font-size: 16px;
-      line-height: 1.5;
-      letter-spacing: 0.02em;
-      color: var(--image-text-color, #f4f4fd);
-      background-color: #4d5ae5;
-      box-sizing: border-box;
+  /* Секція Portfolio end */
 
-      transform: translateY(100%);
-      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-      /* чтобы текст поверх картинки */
-      z-index: 2;
-  }
-
-  /* При наведении на .project-card, поднимаем .image-text */
-  .project-card:hover .image-text {
-      transform: translateY(0%);
-  }
-
-/* Footer */
+/* Footer start */
 .footer {
     background-color: #2e2f42;
     padding: 100px 0;
@@ -548,9 +530,6 @@ img {
     color: var(--white-color, #ffffff);
 }
 
-.footer-social {
-    /* контейнер соцмереж */
-}
 
 .social-title {
     font-weight: 500;
