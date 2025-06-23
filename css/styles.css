@@ -488,9 +488,8 @@ margin-bottom: 72px;
     transform: translateY(0%);
 }
 
-  /* Секція Portfolio end */
 
-/* Footer start */
+/* Footer */
 .footer {
     background-color: #2e2f42;
     padding: 100px 0;
@@ -530,6 +529,9 @@ margin-bottom: 72px;
     color: var(--white-color, #ffffff);
 }
 
+.footer-social {
+    /* контейнер соцмереж */
+}
 
 .social-title {
     font-weight: 500;
