@@ -179,9 +179,12 @@ img {
 .hero-section {
     position: relative;
     max-width: 1440px;
+    margin: 0 auto;
+    /* Центрування */
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
         url(../images/people-office.jpg);
+    /* або .jpeg */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -230,7 +233,6 @@ img {
 .main-button:focus {
     background-color: #404bbf;
 }
-
 /* features */
 
 .features-section {
