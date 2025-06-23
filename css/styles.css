@@ -154,6 +154,7 @@ img {
     color: #434455;
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .contact-link:hover,
@@ -161,15 +162,13 @@ img {
     color: #404bbf;
 }
 
-/*  СЕКЦІЯ HERO  start */
+/* СЕКЦІЯ HERO statr */
 .hero-section {
     position: relative;
     max-width: 1440px;
-    background-image: 
-    linear-gradient
-    (rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)),
-    url(../images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -218,8 +217,6 @@ img {
 .main-button:focus {
     background-color: #404bbf;
 }
-
-/*  СЕКЦІЯ HERO  end */
 
 /* features start */
 
@@ -272,6 +269,7 @@ img {
     margin-bottom: 8px;
 }
 
+
 .feature-icon-box svg {
     width: 64px;
     height: 64px;
@@ -294,10 +292,7 @@ img {
     color: #434455;
 }
 
-/* features end */
-
-/* Секция team start*/
-
+/* Секция team start */
 .team-section {
     background-color: #f4f4fd;
     padding: 120px 0;
@@ -322,9 +317,9 @@ img {
 
 .team-list li:first-child.team-card {
     box-shadow:
-    0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -333,9 +328,9 @@ img {
     border-radius: 0px 0px 4px 4px;
     overflow: hidden;
     box-shadow:
-    0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
     flex-basis: calc((100% - 72px) / 4);
     text-align: center;
 }
@@ -397,31 +392,30 @@ img {
     fill: #fff;
 }
 
-/* Секция team end*/
-
-  /* Секція Portfolio start */
+  /* Секція Portfolio */
 :root {
     --image-text-color: #f4f4fd;
 }
 
+  /* Секция Portfolio */
 .portfolio-section {
     padding-top: 120px;
     padding-bottom: 120px;
     background-color: #ffffff;
 }
 
-.portfolio-section .container {
-max-width: 1158px;
-margin: 0 auto;
-padding: 0 15px;
+    .portfolio-section .container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .section-title {
-font-size: 36px;
-line-height: 1.11;
-color: #2e2f42;
-text-align: center;
-margin-bottom: 72px;
+    font-size: 36px;
+    line-height: 1.11;
+    color: #2e2f42;
+    text-align: center;
+    margin-bottom: 72px;
   }
 
 .project-list {
@@ -434,6 +428,7 @@ margin-bottom: 72px;
     margin: 0;
 }
 
+
 .project-card {
     width: calc((100% - 48px) / 3);
     padding: 0;
@@ -443,8 +438,9 @@ margin-bottom: 72px;
     cursor: pointer;
 }
 
+
 .project-card:hover {
-    box-shadow:
+box-shadow:
     0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -463,7 +459,8 @@ margin-bottom: 72px;
     height: auto;
     border-radius: 4px;
     object-fit: cover;
-}
+  }
+
 
 .image-text {
     position: absolute;
@@ -483,13 +480,12 @@ margin-bottom: 72px;
     z-index: 2;
 }
 
-
 .project-card:hover .image-text {
     transform: translateY(0%);
 }
 
 
-/* Footer */
+/* Footer start*/
 .footer {
     background-color: #2e2f42;
     padding: 100px 0;
@@ -530,7 +526,6 @@ margin-bottom: 72px;
 }
 
 .footer-social {
-    /* контейнер соцмереж */
 }
 
 .social-title {
