@@ -333,9 +333,9 @@ img {
 
 .card-content {
     padding: 32px 0;
-    border-bottom: 120px;
-    border-left: 180px;
-    border-right: 180px;
+    padding-left: 16px;
+    border: 1px solid #E7E9FC;
+    
 }
 
 .card-name {
